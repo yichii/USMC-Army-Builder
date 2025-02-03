@@ -16,7 +16,7 @@ public class Marine {
     }
 
     public Marine(String firstName, Rank rank, int age) {
-        this(firstName, "", rank, age);
+        this(firstName, "N/A", rank, age);
     }
 
     public Marine(String firstName, String lastName, int age) {

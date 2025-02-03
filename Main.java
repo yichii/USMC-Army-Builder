@@ -1,5 +1,7 @@
 import java.util.*;
-
+/*
+* Still need to implement: platoon class, company class, batallion class, regiment class, division class
+*/
 public class Main {
     public static void main(String[] args) {
         // Creating each marine

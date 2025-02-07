@@ -29,9 +29,6 @@ public class Main {
         squad.addFireTeam("Omega", marines);
         System.out.println(squad);
 
-        squad.changeSquadLeager(marine6);
-        System.out.println(squad);
-
         // Creating a platoon
         Platoon platoon = new Platoon("1st Platoon", new Headquarters(null, marine5, marine6, marine7));
         platoon.addSquad(null, null);

@@ -1,5 +1,4 @@
 import java.util.*;
-
 /*
 * A squad consists of one squad leader(that is ranked Sergeant or above) and three fire teams that each contain four marines.
 */
@@ -24,8 +23,9 @@ public class Squad {
     public void addFireTeam(String name, List<Marine> marines) {
         if (fireTeams.size() >= 3) {
             throw new IllegalStateException("A squad must consist a maximum of three fire teams.");
+        } else {
+            fireTeams.add(new FireTeam(name, marines));
         }
-        fireTeams.add(new FireTeam(name, marines));
     }
     
     public List<FireTeam> getFireTeams() {

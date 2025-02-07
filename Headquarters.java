@@ -8,11 +8,11 @@ public class Headquarters {
     private Marine platoonGuide;
     
     public Headquarters(String name, Marine platoonCommander, Marine platoonSergeant, Marine platoonGuide) {
-        if (platoonCommander.getRank().ordinal() <= 3) { 
+        if (platoonCommander.getRank().ordinal() <= 2) { 
             throw new IllegalArgumentException("A Platoon Commander must be at least ranked Lieutenant or above.");
-        } else if (platoonSergeant.getRank().ordinal() <= 2) { 
+        } else if (platoonSergeant.getRank().ordinal() <= 1) { 
             throw new IllegalArgumentException("A Platoon Sergeant must be at least ranked Sergeant or above.");
-        } else if (platoonGuide.getRank().ordinal() <= 2) { 
+        } else if (platoonGuide.getRank().ordinal() <= 1) { 
             throw new IllegalArgumentException("A Platoon Guide must be at least ranked Sergeant or above.");
         } else {
             this.platoonCommander = platoonCommander;
@@ -47,7 +47,7 @@ public class Headquarters {
 
     @Override
     public String toString() {
-        return "Headquarters [platoonCommander=" + platoonCommander + ", platoonSergeant=" + platoonSergeant
+        return "Headquarters \n[platoonCommander=" + platoonCommander + ", platoonSergeant=" + platoonSergeant
                 + ", platoonGuide=" + platoonGuide + "]";
     }
 }

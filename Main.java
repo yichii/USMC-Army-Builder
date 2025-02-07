@@ -19,18 +19,33 @@ public class Main {
         marines.add(marine2);
         marines.add(marine3);
         marines.add(marine4);
-
+        
         // Creating a squad
-        Squad squad = new Squad("Delta Squad", marine5);
-
+        Squad squad = new Squad("Delta Squad", marine5, new ArrayList<FireTeam>(List.of(
+            new FireTeam("Limma", marines), 
+            new FireTeam("Charlie", marines), 
+            new FireTeam("Omega", marines)
+        )));
+        
         // Adding the fire team to the squad
-        squad.addFireTeam("Limma", marines);
-        squad.addFireTeam("Charlie", marines);
-        squad.addFireTeam("Omega", marines);
-        System.out.println(squad);
 
+        System.out.println(squad);
+        
         // Creating a platoon
         Platoon platoon = new Platoon("1st Platoon", new Headquarters(null, marine5, marine6, marine7));
-        platoon.addSquad(null, null);
+        platoon.addSquad(squad);
+        platoon.addSquad(squad);
+        platoon.addSquad(squad);
+        System.out.println(platoon);
+        
+        /* Dilemma: How do we create a platoon that has a squad to be part of it(composition) while also having the fire teams to be part of each
+        * individual squad(composition). How do we do this?
+        * Possible solution #1: have it so you create a squad with the fireteams already intact. We do this by opting for adding a fire team through the
+        * constructor rather through the addFireTeam method. 
+        * 
+        * Drawback: adding a squad will be really cluttered.
+        * 
+        */
+        
     }
 }

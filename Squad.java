@@ -12,22 +12,26 @@ public class Squad {
     * only consists of four marines.
     * @param name
     * @param squadLeader
+    * @param fireTeams
     */
-    Squad(String name, Marine squadLeader) {
+    Squad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
         if (squadLeader.getRank().ordinal() <= 2) {
             throw new IllegalArgumentException("A squad must consist of a squad leader that is ranked Sergeant or above.");
+        } else if (fireTeams.size() != 3) {
+            throw new IllegalStateException("A squad must consist a maximum of three fire teams.");
+        } else {
+            this.name = name;
+            this.squadLeader = squadLeader;
+            this.fireTeams = fireTeams;
         }
-        this.name = name;
-        this.squadLeader = squadLeader;
-        this.fireTeams = new ArrayList<FireTeam>();
     }
     
     /**
     * Assigns a default name of "Squad" to the squad if none is provided
     * @param squadLeader
     */
-    Squad(Marine squadLeader) {
-        this("Squad", squadLeader);
+    Squad(Marine squadLeader, List<FireTeam> fireTeams) {
+        this("Squad", squadLeader, fireTeams);
     }
     
     /**

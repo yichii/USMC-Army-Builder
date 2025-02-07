@@ -27,11 +27,11 @@ public class Platoon {
      * @param name
      * @param squad
      */
-    public void addSquad(String name, List<Squad> squad) {
+    public void addSquad(Squad squad) {
         if (squads.size() >= 3) {
             throw new IllegalStateException("A platoon must consist a maximum of three squads.");
         } else {
-            squads.add(new Squad(name, null));
+            squads.add(squad);
         }
     }
 

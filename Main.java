@@ -4,27 +4,19 @@ import java.util.*;
 */
 public class Main {
     public static void main(String[] args) {
+        // Creating Army Generator
+        ArmyGenerator armyGenerator = new ArmyGenerator();
+
         // Creating each marine
-        Marine marine1 = new Marine("John", "Marine", Rank.CORPORAL, 24);
-        Marine marine2 = new Marine("Mart", "HellDiver", Rank.PRIVATE, 19);
-        Marine marine3 = new Marine("Rambo", "Cena", Rank.PRIVATE, 18);
-        Marine marine4 = new Marine("Steve", "Wojak", Rank.PRIVATE, 20);
-        Marine marine5 = new Marine("Rambo", Rank.LIEUTENANT, 45);
-        Marine marine6 = new Marine("Ray", "Machine Gun", Rank.SERGEANT, 45);
-        Marine marine7 = new Marine("Arthur", "Gun", Rank.SERGEANT, 45);
-        
-        // Creating a list of marines in order to add for each fire team
-        List<Marine> marines = new ArrayList<Marine>();
-        marines.add(marine1);
-        marines.add(marine2);
-        marines.add(marine3);
-        marines.add(marine4);
+        Marine marine5 = armyGenerator.createMarine("Rambo", Rank.LIEUTENANT, 45);
+        Marine marine6 = armyGenerator.createMarine("Ray", "Machine Gun", Rank.SERGEANT, 45);
+        Marine marine7 = armyGenerator.createMarine("Arthur", "Gun", Rank.SERGEANT, 45);
         
         // Creating a squad
         Squad squad = new Squad("Delta Squad", marine5, new ArrayList<FireTeam>(List.of(
-            new FireTeam("Limma", marines), 
-            new FireTeam("Charlie", marines), 
-            new FireTeam("Omega", marines)
+            armyGenerator.createFireTeam("Limma", null), 
+            armyGenerator.createFireTeam("Charlie", null), 
+            armyGenerator.createFireTeam("Omega", null)
         )));
         
         // Adding the fire team to the squad

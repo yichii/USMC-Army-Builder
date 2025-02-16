@@ -1,6 +1,7 @@
 /**
 * Headquarters consists of 3-5 high ranking marines. The rank requirement is dependant on what type of group the headquarters is added to.
-* A headquarters cannot exist without the group that it is added to. A platoon HQ consists of a Platoon Commander, a Platoon Sergeant, and a Platoon Guide
+* A headquarters cannot exist without the group that it is added to. A platoon HQ consists of a Platoon Commander, a Platoon Sergeant, and a 
+* Platoon Guide
 */
 public class Headquarters {
     private Marine platoonCommander;

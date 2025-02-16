@@ -1,32 +1,33 @@
 import java.util.*;
 /**
- * A platoon consists of one hq(3-5 high ranking marines) and three squads that have thirteen marines each.
- */
+* A platoon consists of one hq(3-5 high ranking marines) and three squads that have thirteen marines each. It also consists of a headquarters 
+* of 3-5 high ranking marines. 
+*/
 public class Platoon {
     private String name;
     private Headquarters headquarters;
     private List<Squad> squads;
-
+    
     /**
-     * 
-     * @param name
-     * @param headquarters
-     */
+    * 
+    * @param name
+    * @param headquarters
+    */
     Platoon(String name, Headquarters headquarters) {
         this.name = name;
         this.headquarters = headquarters;
         this.squads = new ArrayList<Squad>();
     }
-
+    
     Platoon(Headquarters headquarters) {
         this("Platoon", headquarters);
     }
-
+    
     /**
-     * 
-     * @param name
-     * @param squad
-     */
+    * 
+    * @param name
+    * @param squad
+    */
     public void addSquad(Squad squad) {
         if (squads.size() >= 3) {
             throw new IllegalStateException("A platoon must consist a maximum of three squads.");
@@ -34,26 +35,26 @@ public class Platoon {
             squads.add(squad);
         }
     }
-
+    
     public List<Squad> getSquads() {
         return squads;
     }
-
+    
     public String getName() {
         return name;
     }
-
+    
     public Headquarters getHeadquarters() {
         return headquarters;
     }
-
+    
     /*
-     * The logic to ensure that only high ranking marines are in the HQ will be in the Headquarters class
-     */
+    * The logic to ensure that only high ranking marines are in the HQ will be in the Headquarters class
+    */
     public void changeHeadquarters(Headquarters headquarters) {
         this.headquarters = headquarters;
     }
-
+    
     @Override
     public String toString() {
         return "Platoon [name= " + name + ", headquarters= " + headquarters + ", squads= " + squads + "]";

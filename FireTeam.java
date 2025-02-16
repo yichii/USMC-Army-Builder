@@ -2,8 +2,7 @@ import java.util.*;
 /*
 * A fireteam consists of four marines with one being ranked Corporal or above.
 */
-public class FireTeam {
-    private String name;
+public class FireTeam extends Unit{
     private List<Marine> marines;    
     
     /**
@@ -19,17 +18,17 @@ public class FireTeam {
                 containsOfficer = true;
                 break;
             }
-            containsOfficer = false;
         }
         
         if (marines.size() != 4) {
             throw new IllegalArgumentException("A fire team must consist of four marines.");
-        } else if (containsOfficer == false) {
+        } 
+        if (containsOfficer == false) {
             throw new IllegalArgumentException("A fire team must consist of at least one ranked Corporal or above.");
-        } else {
-            this.name = name;
-            this.marines = marines;
-        }                  
+        } 
+        super(name);
+        this.marines = marines;
+                        
     }
     
     /**
@@ -40,16 +39,12 @@ public class FireTeam {
         this("Fire Team", marines);
     }
     
-    public String getName() {
-        return name;
-    }
-    
     public List<Marine> getMarines() {
         return marines;
     }
 
     @Override 
     public String toString() {
-        return "Fire Team [name= " + name + ", marines= \n" + marines + "]";
+        return "Fire Team [name= " + super.getName() + ", marines= \n" + marines + "]";
     }
 }

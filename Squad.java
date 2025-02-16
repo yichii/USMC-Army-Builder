@@ -2,8 +2,7 @@ import java.util.*;
 /*
 * A squad consists of one squad leader(that is ranked Sergeant or above) and three fire teams that each contain four marines.
 */
-public class Squad {
-    private String name;
+public class Squad extends Unit{
     private Marine squadLeader;
     private List<FireTeam> fireTeams;
     
@@ -17,13 +16,15 @@ public class Squad {
     Squad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
         if (squadLeader.getRank().ordinal() <= 2) {
             throw new IllegalArgumentException("A squad must consist of a squad leader that is ranked Sergeant or above.");
-        } else if (fireTeams.size() != 3) {
+        } 
+        
+        if (fireTeams.size() != 3) {
             throw new IllegalStateException("A squad must consist a maximum of three fire teams.");
-        } else {
-            this.name = name;
-            this.squadLeader = squadLeader;
-            this.fireTeams = fireTeams;
-        }
+        } 
+        
+        super(name);
+        this.squadLeader = squadLeader;
+        this.fireTeams = fireTeams;
     }
     
     /**
@@ -51,10 +52,6 @@ public class Squad {
         return fireTeams;
     }
     
-    public String getName() {
-        return name;
-    }
-    
     public Marine getSquadLeader() {
         return squadLeader;
     }
@@ -73,6 +70,6 @@ public class Squad {
     
     @Override 
     public String toString() {
-        return "Squad [name= " + name + ", squadLeader= " + squadLeader + ", fireTeams= " + fireTeams + "]";
+        return "Squad [name= " + super.getName() + ", squadLeader= " + squadLeader + ", fireTeams= " + fireTeams + "]";
     }
 }

@@ -3,8 +3,7 @@ import java.util.*;
 * A platoon consists of one hq(3-5 high ranking marines) and three squads that have thirteen marines each. It also consists of a headquarters 
 * of 3-5 high ranking marines. 
 */
-public class Platoon {
-    private String name;
+public class Platoon extends Unit{
     private Headquarters headquarters;
     private List<Squad> squads;
     
@@ -14,7 +13,7 @@ public class Platoon {
     * @param headquarters
     */
     Platoon(String name, Headquarters headquarters) {
-        this.name = name;
+        super(name);
         this.headquarters = headquarters;
         this.squads = new ArrayList<Squad>();
     }
@@ -40,10 +39,6 @@ public class Platoon {
         return squads;
     }
     
-    public String getName() {
-        return name;
-    }
-    
     public Headquarters getHeadquarters() {
         return headquarters;
     }
@@ -57,6 +52,6 @@ public class Platoon {
     
     @Override
     public String toString() {
-        return "Platoon [name= " + name + ", headquarters= " + headquarters + ", squads= " + squads + "]";
+        return "Platoon [name= " + super.getName() + ", headquarters= " + headquarters + ", squads= " + squads + "]";
     }
 }

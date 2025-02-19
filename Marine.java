@@ -2,6 +2,10 @@ enum Rank {
     PRIVATE, CORPORAL, SERGEANT, LIEUTENANT, CAPTAIN, MAJOR, COLONEL, GENERAL, COMMANDER // Add more(you dont have to put all)
 }
 
+enum Weapon {
+    M1_GARAND, BAR, THOMPSON, SPRINGFIELD, M1_CARBINE, TRENCHGUN, M2_MORTAR, BROWNING_MG, M1_BAZOOKA
+}
+
 public class Marine {
     private String firstName;
     private String lastName;

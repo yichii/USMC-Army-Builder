@@ -1,3 +1,5 @@
+package com.armybuilder.models;
+
 import java.util.*;
 /*
 * A squad consists of one squad leader(that is ranked Sergeant or above) and three fire teams that each contain four marines.
@@ -14,6 +16,7 @@ public class Squad extends Unit{
     * @param fireTeams
     */
     Squad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
+        super(name);
         if (squadLeader.getRank().ordinal() <= 2) {
             throw new IllegalArgumentException("A squad must consist of a squad leader that is ranked Sergeant or above.");
         } 
@@ -22,7 +25,6 @@ public class Squad extends Unit{
             throw new IllegalStateException("A squad must consist a maximum of three fire teams.");
         } 
         
-        super(name);
         this.squadLeader = squadLeader;
         this.fireTeams = fireTeams;
     }

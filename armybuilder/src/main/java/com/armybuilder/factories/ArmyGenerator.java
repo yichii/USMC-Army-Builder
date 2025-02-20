@@ -1,5 +1,8 @@
-import java.util.*;
+package com.armybuilder.factories;
 
+import java.util.*;
+import com.armybuilder.enums.Rank;
+import com.armybuilder.models.*;
 /*
  *  The ArmyGenerator class is used as a factory class to generate any army group ranging from a Marine, all the way up to a Platoon. 
  */

@@ -1,3 +1,5 @@
+package com.armybuilder.models;
+
 public abstract class Unit {
     private String name;
 

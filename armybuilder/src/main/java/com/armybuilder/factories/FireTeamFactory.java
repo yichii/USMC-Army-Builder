@@ -2,11 +2,12 @@ package com.armybuilder.factories;
 
 import java.util.*;
 import com.armybuilder.enums.Rank;
-import com.armybuilder.models.*;
+import com.armybuilder.models.Marine;
+import com.armybuilder.models.FireTeam;
 /*
  *  The ArmyGenerator class is used as a factory class to generate any army group ranging from a Marine, all the way up to a Platoon. 
  */
-public class ArmyGenerator {
+public class FireTeamFactory {
     MarineFactory marineFactory = new MarineFactory();
     /**
      * 

@@ -1,16 +1,16 @@
 package com.armybuilder;
-import java.util.*;
-
-import com.armybuilder.factories.ArmyGenerator;
+import com.armybuilder.factories.FireTeamFactory;
 import com.armybuilder.models.FireTeam;
 import com.armybuilder.models.Marine;
 import com.armybuilder.enums.Rank;
+import java.util.List;
+import java.util.ArrayList;
 /*
 * Unit Composition: fireteam -> squad -> platoon -> company -> battalion -> regiment -> division
 */
 public class App {
     public static void main(String[] args) {
-        ArmyGenerator ag = new ArmyGenerator();
+        FireTeamFactory ag = new FireTeamFactory();
         FireTeam ft1 = ag.createFireTeam("Firelight", null);
         System.out.println(ft1);
 

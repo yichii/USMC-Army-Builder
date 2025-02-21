@@ -17,7 +17,7 @@ public class Squad extends Unit{
     */
     public Squad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
         super(name);
-        if (squadLeader.getRank().ordinal() <= 2) {
+        if (squadLeader.getRank().ordinal() <= 1) {
             throw new IllegalArgumentException("A squad must consist of a squad leader that is ranked Sergeant or above.");
         } 
         

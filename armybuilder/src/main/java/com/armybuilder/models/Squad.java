@@ -15,7 +15,7 @@ public class Squad extends Unit{
     * @param squadLeader
     * @param fireTeams
     */
-    Squad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
+    public Squad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
         super(name);
         if (squadLeader.getRank().ordinal() <= 2) {
             throw new IllegalArgumentException("A squad must consist of a squad leader that is ranked Sergeant or above.");
@@ -33,7 +33,7 @@ public class Squad extends Unit{
     * Assigns a default name of "Squad" to the squad if none is provided
     * @param squadLeader
     */
-    Squad(Marine squadLeader, List<FireTeam> fireTeams) {
+    public Squad(Marine squadLeader, List<FireTeam> fireTeams) {
         this("Squad", squadLeader, fireTeams);
     }
     

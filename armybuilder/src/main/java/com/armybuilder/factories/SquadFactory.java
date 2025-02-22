@@ -5,6 +5,10 @@ import com.armybuilder.models.FireTeam;
 import com.armybuilder.models.Squad;
 import java.util.List;
 import java.util.ArrayList;
+
+/*
+ *  The SquadFactory class uses the factory design pattern to generate Squads. 
+ */
 public class SquadFactory {
     FireTeamFactory fireTeamFactory = new FireTeamFactory();
     Marine defaultMarine = new Marine("Humprey", Rank.SERGEANT, 25);

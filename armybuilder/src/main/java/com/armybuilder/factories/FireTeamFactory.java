@@ -4,8 +4,9 @@ import com.armybuilder.models.Marine;
 import com.armybuilder.models.FireTeam;
 import java.util.List;
 import java.util.ArrayList;
+
 /*
- *  The ArmyGenerator class is used as a factory class to generate any army group ranging from a Marine, all the way up to a Platoon. 
+ *  The FireTeamFactory class uses the factory design pattern to generate FireTeams. 
  */
 public class FireTeamFactory {
     MarineFactory marineFactory = new MarineFactory();
@@ -28,5 +29,14 @@ public class FireTeamFactory {
         } else {
             return new FireTeam(name, marines);
         }
+    }
+
+    /**
+     * 
+     * @param marines
+     * @return FireTeam with default name("FireTeam")
+     */
+    public FireTeam createFireTeam(List<Marine> marines) {
+        return new FireTeam(marines);
     }
 }

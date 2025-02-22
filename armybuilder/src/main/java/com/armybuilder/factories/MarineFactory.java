@@ -2,6 +2,9 @@ package com.armybuilder.factories;
 import com.armybuilder.enums.Rank;
 import com.armybuilder.models.Marine;
 
+/*
+ *  The MarineFactory class uses the factory design pattern to generate Marines. 
+ */
 public class MarineFactory {
     /**
          * 
@@ -20,7 +23,7 @@ public class MarineFactory {
          * @param firstName
          * @param rank
          * @param age
-         * @return Marine with default last name(N/A)
+         * @return Marine with default last name("N/A")
          */
         public Marine createMarine(String firstName, Rank rank, int age) {
             return new Marine(firstName, rank, age);
@@ -31,7 +34,7 @@ public class MarineFactory {
          * @param firstName
          * @param lastName
          * @param age
-         * @return Marine with default rank(Private)
+         * @return Marine with default rank("Private")
          */
         public Marine createMarine(String firstName, String lastName, int age) {
             return new Marine(firstName, lastName, age);

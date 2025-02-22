@@ -13,10 +13,10 @@ public class SquadFactory {
     FireTeamFactory fireTeamFactory = new FireTeamFactory();
     Marine defaultSquadLeader = new Marine("Humprey", Rank.SERGEANT, 25);
     List<FireTeam> defaultFireTeams = new ArrayList<FireTeam>(List.of(
-            fireTeamFactory.createFireTeam("Sigma Squad", null),
-            fireTeamFactory.createFireTeam("Foreign Legion", null),
-            fireTeamFactory.createFireTeam("Crusade Avenger", null)
-        ));
+        fireTeamFactory.createFireTeam("Sigma Squad", null),
+        fireTeamFactory.createFireTeam("Foreign Legion", null),
+        fireTeamFactory.createFireTeam("Crusade Avenger", null)
+    ));
     
     /**
      * 

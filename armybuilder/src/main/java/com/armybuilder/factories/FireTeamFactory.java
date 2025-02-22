@@ -10,6 +10,13 @@ import java.util.ArrayList;
  */
 public class FireTeamFactory {
     MarineFactory marineFactory = new MarineFactory();
+    List<Marine> defaultMarines = new ArrayList<Marine>(List.of(
+        marineFactory.createMarine("John", "Helldiver", Rank.CORPORAL, 27),
+        marineFactory.createMarine("Tau", "Smith", Rank.PRIVATE, 23),
+        marineFactory.createMarine("Ron", "Henly", Rank.PRIVATE, 19),
+        marineFactory.createMarine("Rabi", "Tex", Rank.PRIVATE, 20)
+    ));
+
     /**
      * 
      * @param name
@@ -17,18 +24,7 @@ public class FireTeamFactory {
      * @return FireTeam
      */
     public FireTeam createFireTeam(String name, List<Marine> marines) {
-        List<Marine> defaultMarines = new ArrayList<Marine>(List.of(
-            marineFactory.createMarine("John", "Helldiver", Rank.CORPORAL, 27),
-            marineFactory.createMarine("Tau", "Smith", Rank.PRIVATE, 23),
-            marineFactory.createMarine("Ron", "Henly", Rank.PRIVATE, 19),
-            marineFactory.createMarine("Rabi", "Tex", Rank.PRIVATE, 20)
-        ));
-
-        if (marines == null) {
-            return new FireTeam(name, defaultMarines);
-        } else {
-            return new FireTeam(name, marines);
-        }
+        return new FireTeam(name, marines);
     }
 
     /**
@@ -38,5 +34,14 @@ public class FireTeamFactory {
      */
     public FireTeam createFireTeam(List<Marine> marines) {
         return new FireTeam(marines);
+    }
+
+    /**
+     * 
+     * @param name
+     * @return A fireteam with default marines.
+     */
+    public FireTeam createFireTeam(String name) {
+        return new FireTeam(name, defaultMarines);
     }
 }

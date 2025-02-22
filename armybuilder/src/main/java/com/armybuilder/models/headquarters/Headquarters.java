@@ -1,4 +1,6 @@
-package com.armybuilder.models;
+package com.armybuilder.models.headquarters;
+
+import com.armybuilder.models.Marine;
 
 /**
 * Headquarters consists of 3-5 high ranking marines. The rank requirement is dependant on what type of group the headquarters is added to.

@@ -1,6 +1,10 @@
-package com.armybuilder.models;
+package com.armybuilder.models.platoon;
 
 import java.util.*;
+
+import com.armybuilder.models.Squad;
+import com.armybuilder.models.Unit;
+import com.armybuilder.models.headquarters.Headquarters;
 /**
 * A platoon consists of one hq(3-5 high ranking marines) and three squads that have thirteen marines each. It also consists of a headquarters 
 * of 3-5 high ranking marines. 

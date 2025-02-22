@@ -1,6 +1,10 @@
 package com.armybuilder.models;
 
 import java.util.*;
+
+import com.armybuilder.models.headquarters.CompanyHeadquarters;
+import com.armybuilder.models.platoon.RiflePlatoon;
+import com.armybuilder.models.platoon.WeaponPlatoon;
 /**
  * A company consists of three rifle platoons plus a weapons platoon. It also consists of a headquarters with 8-10 high ranking marines. 
  */

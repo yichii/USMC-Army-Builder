@@ -18,13 +18,13 @@ public class Platoon extends Unit{
     * @param name
     * @param headquarters
     */
-    Platoon(String name, Headquarters headquarters) {
+    public Platoon(String name, Headquarters headquarters) {
         super(name);
         this.headquarters = headquarters;
         this.squads = new ArrayList<Squad>();
     }
     
-    Platoon(Headquarters headquarters) {
+    public Platoon(Headquarters headquarters) {
         this("Platoon", headquarters);
     }
     

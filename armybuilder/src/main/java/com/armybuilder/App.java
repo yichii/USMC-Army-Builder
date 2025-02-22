@@ -1,32 +1,24 @@
 package com.armybuilder;
-import com.armybuilder.factories.SquadFactory;
-import com.armybuilder.factories.FireTeamFactory;
+
+import com.armybuilder.models.Company;
+import com.armybuilder.models.platoon.Platoon;
+import com.armybuilder.models.headquarters.CompanyHeadquarters;
+import com.armybuilder.models.headquarters.Headquarters;
 import com.armybuilder.models.Marine;
-import com.armybuilder.models.FireTeam;
-import com.armybuilder.models.Squad;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.armybuilder.enums.Rank;
+import com.armybuilder.factories.MarineFactory;
+import com.armybuilder.factories.SquadFactory;
 /*
 * Unit Composition: fireteam -> squad -> platoon -> company -> battalion -> regiment -> division
 */
 public class App {
     public static void main(String[] args) {
-        Marine marine = new Marine("Sergeant", Rank.SERGEANT, 29);
-        FireTeamFactory fireTeamFactory = new FireTeamFactory();
-        FireTeam fireTeam = fireTeamFactory.createFireTeam(null, null);
+        MarineFactory marineFactory = new MarineFactory();
+        Marine marine = marineFactory.createMarine("Johnny", "Helldiver", Rank.COMMANDER, 25);
+        Headquarters headquarters = new Headquarters(null, marine, marine, marine);
         SquadFactory squadFactory = new SquadFactory();
-        Squad squad = squadFactory.createSquad("27th", marine, null);
-        System.out.println(squad);
-        
-        Squad squad2 = squadFactory.createSquad("28thth", null, new ArrayList<FireTeam>(List.of(
-                    fireTeamFactory.createFireTeam("Sigma Squad", null),
-                    fireTeamFactory.createFireTeam("Foreign Legion", null),
-                    fireTeamFactory.createFireTeam("Crusade Avenger", null)
-                )));
-        System.out.println(squad2);
+        squadFactory.createSquad("Deathwatch", marine, null);
+        Platoon platoon = new Platoon(headquarters);
 
     }
 }

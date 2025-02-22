@@ -11,23 +11,60 @@ import java.util.ArrayList;
  */
 public class SquadFactory {
     FireTeamFactory fireTeamFactory = new FireTeamFactory();
-    Marine defaultMarine = new Marine("Humprey", Rank.SERGEANT, 25);
-    
-    public Squad createSquad(String name, Marine squadLeader, List<FireTeam> fireTeams) {
-        List<FireTeam> defaultFireTeams = new ArrayList<FireTeam>(List.of(
+    Marine defaultSquadLeader = new Marine("Humprey", Rank.SERGEANT, 25);
+    List<FireTeam> defaultFireTeams = new ArrayList<FireTeam>(List.of(
             fireTeamFactory.createFireTeam("Sigma Squad", null),
             fireTeamFactory.createFireTeam("Foreign Legion", null),
             fireTeamFactory.createFireTeam("Crusade Avenger", null)
         ));
-        
-        if ((squadLeader == null) && (fireTeams == null)) {
-            return new Squad(name, defaultMarine, defaultFireTeams);
-        } else if (squadLeader == null) {
-            return new Squad(name, defaultMarine, fireTeams);
-        } else if (fireTeams == null) {
-            return new Squad(name, squadLeader, defaultFireTeams);
-        } else {
-            return new Squad(name, squadLeader, fireTeams);
-        }
+    
+    /**
+     * 
+     * @param name
+     * @param squadLeader
+     * @param fireTeams
+     * @return
+     */
+    public Squad createSquad(String name, Marine squadLeader, List<FireTeam> fireTeams) { 
+        return new Squad(name, squadLeader, fireTeams);
+    }
+
+    /**
+     * 
+     * @param squadLeader
+     * @param fireTeams
+     * @return A squad with a default name("Squad")
+     */
+    public Squad createSquad(Marine squadLeader, List<FireTeam> fireTeams) {
+        return new Squad(squadLeader, fireTeams);
+    }
+
+    /**
+     * 
+     * @param name
+     * @return A squad with a default squad leader and fire teams
+     */
+    public Squad createSquad(String name) {
+        return new Squad(name, defaultSquadLeader, defaultFireTeams);
+    }
+
+    /**
+     * 
+     * @param name
+     * @param squadLeader
+     * @return A squad with default fire teams
+     */
+    public Squad createSquad(String name, Marine squadLeader) {
+        return new Squad(name, squadLeader, defaultFireTeams);
+    }
+    
+    /**
+     * 
+     * @param name
+     * @param fireTeams
+     * @return A squad with a default squad leader
+     */
+    public Squad createSquad(String name, List<FireTeam> fireTeams) {
+        return new Squad(name, defaultSquadLeader, defaultFireTeams);
     }
 }

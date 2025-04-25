@@ -1,6 +1,6 @@
 # United States Marine Corps Structure
 ### Fire Team
-Includes three marines and a fire leader which is usually a Corporal
+Includes three marines and a team leader which is usually a Corporal
 ### Squad(Also referred to as section)
 Includes three fire teams and is commanded by a Sergeant. Totals up to 9 marines
 ### Platoon

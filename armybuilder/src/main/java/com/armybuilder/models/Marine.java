@@ -1,6 +1,5 @@
 package com.armybuilder.models;
 
-import com.armybuilder.enums.Rank;
 import lombok.Data;
 import lombok.Builder;
 

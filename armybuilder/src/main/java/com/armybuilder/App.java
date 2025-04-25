@@ -13,12 +13,7 @@ import com.armybuilder.factories.SquadFactory;
 */
 public class App {
     public static void main(String[] args) {
-        MarineFactory marineFactory = new MarineFactory();
-        Marine marine = marineFactory.createMarine("Johnny", "Helldiver", Rank.COMMANDER, 25);
-        Headquarters headquarters = new Headquarters(null, marine, marine, marine);
-        SquadFactory squadFactory = new SquadFactory();
-        squadFactory.createSquad("Deathwatch", marine, null);
-        Platoon platoon = new Platoon(headquarters);
+
 
     }
 }

@@ -10,61 +10,18 @@ import java.util.ArrayList;
  *  The SquadFactory class uses the factory design pattern to generate Squads. 
  */
 public class SquadFactory {
-    FireTeamFactory fireTeamFactory = new FireTeamFactory();
-    Marine defaultSquadLeader = new Marine("Humprey", Rank.SERGEANT, 25);
-    List<FireTeam> defaultFireTeams = new ArrayList<FireTeam>(List.of(
-        fireTeamFactory.createFireTeam("Sigma Squad", null),
-        fireTeamFactory.createFireTeam("Foreign Legion", null),
-        fireTeamFactory.createFireTeam("Crusade Avenger", null)
-    ));
-    
-    /**
-     * 
-     * @param name
-     * @param squadLeader
-     * @param fireTeams
-     * @return
-     */
-    public Squad createSquad(String name, Marine squadLeader, List<FireTeam> fireTeams) { 
-        return new Squad(name, squadLeader, fireTeams);
-    }
+    private final FireTeamFactory fireTeamFactory = new FireTeamFactory();
+    private final MarineFactory marineFactory = new MarineFactory();
 
-    /**
-     * 
-     * @param squadLeader
-     * @param fireTeams
-     * @return A squad with a default name("Squad")
-     */
-    public Squad createSquad(Marine squadLeader, List<FireTeam> fireTeams) {
-        return new Squad(squadLeader, fireTeams);
-    }
-
-    /**
-     * 
-     * @param name
-     * @return A squad with a default squad leader and fire teams
-     */
-    public Squad createSquad(String name) {
-        return new Squad(name, defaultSquadLeader, defaultFireTeams);
-    }
-
-    /**
-     * 
-     * @param name
-     * @param squadLeader
-     * @return A squad with default fire teams
-     */
-    public Squad createSquad(String name, Marine squadLeader) {
-        return new Squad(name, squadLeader, defaultFireTeams);
-    }
-    
-    /**
-     * 
-     * @param name
-     * @param fireTeams
-     * @return A squad with a default squad leader
-     */
-    public Squad createSquad(String name, List<FireTeam> fireTeams) {
-        return new Squad(name, defaultSquadLeader, defaultFireTeams);
+    public Squad createRandomSquad() {
+        List<FireTeam> fireTeams = new ArrayList<>();
+        Marine squadLeader = marineFactory.createRandomMarine(2);
+        for (int i = 0; i < 4; i++) {
+            fireTeams.add(fireTeamFactory.createRandomFireTeam());
+        }
+        return Squad.builder()
+                .fireTeams(fireTeams)
+                .squadLeader(squadLeader)
+                .build();
     }
 }

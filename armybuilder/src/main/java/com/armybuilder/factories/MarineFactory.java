@@ -4,9 +4,6 @@ import com.armybuilder.models.Marine;
 import java.util.List;
 import java.util.Random;
 
-/*
- *  The MarineFactory class uses the factory design pattern to generate Marines.
- */
 public class MarineFactory {
     private static final List<String> NAMES = List.of("Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez",
             "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin",

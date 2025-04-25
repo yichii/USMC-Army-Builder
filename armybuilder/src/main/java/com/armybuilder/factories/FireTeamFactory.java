@@ -5,12 +5,13 @@ import com.armybuilder.models.FireTeam;
 import java.util.List;
 import java.util.ArrayList;
 
-/*
- *  The FireTeamFactory class uses the factory design pattern to generate FireTeams. 
- */
 public class FireTeamFactory {
     private final MarineFactory marineFactory = new MarineFactory();
 
+    /**
+     *
+     * @return A random fire team with a team leader that is ranked as a Corporal
+     */
     public FireTeam createRandomFireTeam() {
         List<Marine> marines = new ArrayList<>();
         Marine fireTeamLeader = marineFactory.createRandomMarine(1);

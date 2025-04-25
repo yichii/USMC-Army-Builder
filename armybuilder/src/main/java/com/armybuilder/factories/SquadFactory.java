@@ -1,18 +1,19 @@
 package com.armybuilder.factories;
-import com.armybuilder.enums.Rank;
+
 import com.armybuilder.models.Marine;
 import com.armybuilder.models.FireTeam;
 import com.armybuilder.models.Squad;
 import java.util.List;
 import java.util.ArrayList;
 
-/*
- *  The SquadFactory class uses the factory design pattern to generate Squads. 
- */
 public class SquadFactory {
     private final FireTeamFactory fireTeamFactory = new FireTeamFactory();
     private final MarineFactory marineFactory = new MarineFactory();
 
+    /**
+     *
+     * @return A random squad with a squad leader that is ranked as a Sergeant
+     */
     public Squad createRandomSquad() {
         List<FireTeam> fireTeams = new ArrayList<>();
         Marine squadLeader = marineFactory.createRandomMarine(2);

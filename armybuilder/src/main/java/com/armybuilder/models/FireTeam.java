@@ -1,6 +1,6 @@
 package com.armybuilder.models;
 
-import java.util.*;
+import java.util.List;
 import lombok.Data;
 import lombok.Builder;
 

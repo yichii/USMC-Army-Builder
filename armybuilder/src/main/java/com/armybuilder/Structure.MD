@@ -1,23 +1,54 @@
 # United States Marine Corps Structure
+
+## Units
 ### Fire Team
 Includes three marines and a team leader which is usually a Corporal
+
 ### Squad(Also referred to as section)
 Includes three fire teams and is commanded by a Sergeant. Totals up to 9 marines
+
 ### Platoon
-Consists of three squads and is commanded by a Lieutenant. Totals up to 27 marines
+#### Rifle Platoon 
+Led by a 2Lt or 1Lt, consists of three rifle squads, and a platoon HQ.
+
+#### Weapons Platoon
+Usually led by a 1Lt and assisted by a GySgt as the platoon sergeant. Consists of a mortar section, assault section, and medium machine gun section. The mortar section is led by a SSgt and consists of three mortar squads, with each squad led by a Cpl as the squad leader. The assault section is led a Sgt and consists of three assault squads with each squad led by a Cpl and contains two teams with each team consisting of two marines. A medium machine gun section, led by a staff sergeant as section leader and consisting of three machine gun squads, with each squad led by a sergeant as squad leader and containing two teams, which each team led by a corporal as team leader and containing one M240G and three Marines. 
+
 ### Company
-Includes three or more platoons. Commanded by a Captain. Companies are the lowest command level to have a headquarters element. Totals up to 243 marines
+#### Rifle Company
+Consists of three rifle platoons, a weapons platoon, and a company headquarters.
+
+#### Weapons Company
+Commanded by a major and assisted by a captain as XO, will substitute for the rifle platoons an 81 mm mortar platoon, an anti-armor platoon, and a heavy machine gun platoon. In deference to the more extensive training requirements and complicated tactical considerations necessitated by the crew-served weapons employed by the weapons company, its platoon commanders are usually 1st lieutenants and the platoon sergeants are gunnery sergeants. The company headquarters includes a master sergeant as the operations chief (in lieu of the company gunnery sergeant) and an additional messenger/driver.
+
+#### Headquarters and service Company
+Commanded by a captain and assisted by a 2nd or 1st lieutenant as the XO, contains the battalion headquarters, which includes the command section (including the battalion CO, battalion XO, and the sergeant major), the executive staff sections (S-1, S-2, S-3, S-4, & S-6), and the chaplain section. The company consists of a company headquarters section, a scout sniper platoon, a communications platoon, a service platoon, and a medical platoon.
+Includes three or more platoons and a company HQ. Totals up to 243 marines
+
 ### Battalion
-Includes three or more companies. Commanded by a Lieutenant Colonel. Totals up to 729 marines
+Commanded by a lieutenant colonel and assisted by a major as the battalion XO, consists of three rifle companies, a weapons company, and a headquarters and service company.
+
 ### Regiment(Also referred to as brigade)
-Three battalions form a regiment or a brigade. Commanded by a Colonel. Totals up to 2,187 marines.
+Commanded by a colonel and assisted by a lieutenant colonel as the regimental XO, consists of three battalions, and a regimental headquarters company.
+
 ### Marine Division
-Three regiments or brigades make up a division. Commanded by a Major General. Totals up to 6,561 marines.
-### Marine Corps
-Three or more divisions make up the Marine Corps. The Marine Corps' leader, the commandant reports directly to the secretary of state. Totals up to 26,244 marines.
+Commanded by a major general as the commanding general (CG) and assisted by a brigadier general as the assistant division commander, usually consists of three infantry regiments, an artillery regiment, several separate battalions (i.e., reconnaissance, assault amphibian, tank, light armored reconnaissance, and combat engineer), and a headquarters battalion.
+
+## Headquarters
+### Platoon HQ
+Made up the platoon commander(2LT or 1LT), a platoon sergeant(SSgt), a platoon guide, and a messenger. (One or more Navy Medical Corpsman are usually attached to the platoon from the battalion's medical platoon.) The platoon sergeant, usually a staff sergeant, advises the commander and serves as the second-in-command. The platoon guide, usually a sergeant, serves as the assistant platoon sergeant.
+
+### Company HQ
+Commanded by a captain as the commanding officer (CO) and assisted by a 1st lieutenant as the company executive officer (XO) who serves as second-in-command, and also includes the first sergeant, company gunnery sergeant, property NCO, and a messenger/driver.
+
+### Battalion HQ
+
+### Division HQ
+
+### Marine Corps HQ
 
 ---
-#### USMC Army Builder - this website will visualize how big the Marine Corp Structure really is with the use of distinct symbols. For example, dots representing each marine, square representing squads, and so forth. Everything will be randomly generated so that unit creation is faster and easier. 
+#### USMC Army Builder - this website will visualize how big the Marine Corp Structure really is with the use of distinct symbols. For example, dots representing each marine, square representing squads, and so forth. Everything will be randomly generated so that unit creation is more realistic. Each marine will provide details as well for their role and weapon equipped.
 
 ### Tasks
 - [ ] Create entity class for each type of unit structure(dumb/simple classes)

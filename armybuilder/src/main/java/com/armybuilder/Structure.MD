@@ -21,10 +21,6 @@ Consists of three rifle platoons, a weapons platoon, and a company headquarters.
 #### Weapons Company
 Commanded by a major and assisted by a captain as XO, will substitute for the rifle platoons an 81 mm mortar platoon, an anti-armor platoon, and a heavy machine gun platoon. In deference to the more extensive training requirements and complicated tactical considerations necessitated by the crew-served weapons employed by the weapons company, its platoon commanders are usually 1st lieutenants and the platoon sergeants are gunnery sergeants. The company headquarters includes a master sergeant as the operations chief (in lieu of the company gunnery sergeant) and an additional messenger/driver.
 
-#### Headquarters and service Company
-Commanded by a captain and assisted by a 2nd or 1st lieutenant as the XO, contains the battalion headquarters, which includes the command section (including the battalion CO, battalion XO, and the sergeant major), the executive staff sections (S-1, S-2, S-3, S-4, & S-6), and the chaplain section. The company consists of a company headquarters section, a scout sniper platoon, a communications platoon, a service platoon, and a medical platoon.
-Includes three or more platoons and a company HQ. Totals up to 243 marines
-
 ### Battalion
 Commanded by a lieutenant colonel and assisted by a major as the battalion XO, consists of three rifle companies, a weapons company, and a headquarters and service company.
 
@@ -40,6 +36,11 @@ Made up the platoon commander(2LT or 1LT), a platoon sergeant(SSgt), a platoon g
 
 ### Company HQ
 Commanded by a captain as the commanding officer (CO) and assisted by a 1st lieutenant as the company executive officer (XO) who serves as second-in-command, and also includes the first sergeant, company gunnery sergeant, property NCO, and a messenger/driver.
+
+### Headquarters and service Company
+Commanded by a captain and assisted by a 2nd or 1st lieutenant as the XO, contains the battalion headquarters, which includes the command section (including the battalion CO, battalion XO, and the sergeant major), the executive staff sections (S-1, S-2, S-3, S-4, & S-6), and the chaplain section. The company consists of a company headquarters section, a scout sniper platoon, a communications platoon, a service platoon, and a medical platoon.
+
+### Regimental HQ Company
 
 ### Battalion HQ
 

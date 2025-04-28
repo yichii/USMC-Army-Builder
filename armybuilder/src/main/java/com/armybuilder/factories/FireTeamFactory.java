@@ -14,7 +14,7 @@ public class FireTeamFactory {
      */
     public FireTeam createRandomFireTeam() {
         List<Marine> marines = new ArrayList<>();
-        Marine fireTeamLeader = marineFactory.createRandomMarine(1);
+        Marine fireTeamLeader = marineFactory.createRandomMarine(3);
         for (int i = 0; i < 4; i++) {
             marines.add(marineFactory.createRandomMarine(0));
         }

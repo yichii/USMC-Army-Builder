@@ -11,15 +11,15 @@ public class MarineFactory {
             "Walker", "Young", "Allen", "King", "Wright", "Scott", "Torres", "Nguyen", "Hill", "Flores",
             "Green", "Adams", "Nelson", "Baker", "Hall", "Rivera", "Campbell", "Mitchell", "Carter", "Roberts"
     );
-    private static final List<String> RANKS = List.of("Pvt", "Cpl", "Sgt", "Lt", "Cpt", "Lt Col", "Col", "Maj Gen", "Cdt");
+    private static final List<String> RANKS = List.of("Pvt", "PFC", "LCpl", "Cpl", "Sgt", "SSgt", "GySgt", "MSgt", "1stSg", "MGySg", "SgtMa", "WO1", "CW2", "CW3", "CW4", "CW5", "2ndLt", "1stLt", "Capt", "Maj", "LtCol", "Col", "BGen", "MajGen", "LtGen", "Gen");
     private final Random random = new Random();
-    private final String name = NAMES.get(random.nextInt(NAMES.size()));
 
     /**
      *
      * @return A random marine with a random rank and random name
      */
     public Marine createRandomMarine() {
+        String name = NAMES.get(random.nextInt(NAMES.size()));
         String rank = RANKS.get(random.nextInt(RANKS.size()));
         return Marine.builder()
                 .name(name)
@@ -33,6 +33,7 @@ public class MarineFactory {
      * @return A random marine with a chosen rank and a random name
      */
     public Marine createRandomMarine(int desiredRank) {
+        String name = NAMES.get(random.nextInt(NAMES.size()));
         String rank = RANKS.get(desiredRank);
         return Marine.builder()
                 .name(name)

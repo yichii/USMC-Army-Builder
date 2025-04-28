@@ -1,10 +1,9 @@
 package com.armybuilder.factories;
 
 import com.armybuilder.factories.headquarters.PlatoonHQFactory;
+import com.armybuilder.models.headquarters.PlatoonHQ;
 import com.armybuilder.models.Platoon;
-import com.armybuilder.models.Marine;
 import com.armybuilder.models.Squad;
-import com.armybuilder.models.headquarters.Headquarters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ public class PlatoonFactory {
 
     public Platoon createRandomPlatoon() {
         List<Squad> squads = new ArrayList<>();
-        PlatoonHQFactory platoonHQ = platoonHQFactory.createRandomHQ());
+        PlatoonHQ platoonHQ = platoonHQFactory.createRandomPlatoonHQ();
 
         for (int i = 0; i < 4; i++) {
             squads.add(squadFactory.createRandomSquad());

@@ -2,10 +2,20 @@
 
 ## Units
 ### Fire Team
-Includes three marines and a team leader which is usually a Corporal
+Includes three marines and a team leader which is usually a Corporal.
 
-### Squad(Also referred to as section)
+### Squad
 Includes three fire teams and is commanded by a Sergeant. Totals up to 9 marines
+
+### Section(makes up a Weapons Platoon)
+#### Medium Machine Gun Section
+Led by a section leader which is typically a SSgt. Consists of three medium machine gun squads that each have a squad leader, which is usually a Sgt, and two medium machine gun teams that have three marines each. Totals up to 22 marines.
+
+#### Mortar Section
+Led by a section leader which is typically a SSgt. Consists of three mortar squads that each have a squad leader, which is usually a Cpl, and has four marines each. Totals up to 16 marines.
+
+#### Assault Section
+Led by a section leader which is typically a Sgt. Consists of three assault squads that each have a squad leader, which is usually a Cpl, and two assault teams that have two marines each. Totals up to 16 marines.
 
 ### Platoon
 #### Rifle Platoon 

@@ -7,6 +7,6 @@ import lombok.Builder;
 @Data
 @Builder
 public class Squad {
-    private List<FireTeam> fireTeams;
+    private List<?> fireTeams;
     private Marine squadLeader;
 }

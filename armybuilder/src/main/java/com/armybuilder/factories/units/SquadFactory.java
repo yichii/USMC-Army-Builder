@@ -25,4 +25,40 @@ public class SquadFactory {
                 .squadLeader(squadLeader)
                 .build();
     }
+
+    public Squad createRandomMMGSquad() {
+        List<FireTeam> fireTeams = new ArrayList<>();
+        Marine squadLeader = marineFactory.createRandomMarine(4);
+        for (int i = 0; i < 3; i++) {
+            fireTeams.add(fireTeamFactory.createRandomMMGFireTeam());
+        }
+        return Squad.builder()
+                .fireTeams(fireTeams)
+                .squadLeader(squadLeader)
+                .build();
+    }
+
+    public Squad createRandomMortarSquad() {
+        List<Marine> marines = new ArrayList<>();
+        Marine squadLeader = marineFactory.createRandomMarine(3);
+        for (int i = 0; i < 3; i++) {
+            marines.add(marineFactory.createRandomMarine());
+        }
+        return Squad.builder()
+                .fireTeams(marines)
+                .squadLeader(squadLeader)
+                .build();
+    }
+
+    public Squad createRandomAssaultSquad() {
+        List<Marine> fireTeams = new ArrayList<>();
+        Marine squadLeader = marineFactory.createRandomMarine(3);
+        for (int i = 0; i < 3; i++) {
+            fireTeams.add(marineFactory.createRandomMarine());
+        }
+        return Squad.builder()
+                .fireTeams(fireTeams)
+                .squadLeader(squadLeader)
+                .build();
+    }
 }
